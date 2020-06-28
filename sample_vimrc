@@ -1,7 +1,21 @@
+set nocompatible
+
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+
+call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ycm-core/YouCompleteMe'
+
+call vundle#end()
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
+filetype plugin indent on
+
 """" 1. Vim Behaviour.
 " Use filetype-based syntax hilighting, ftplugins, and indentation.
 syntax on
-filetype plugin indent on
 " Use numbering. Don't use relative numbering as this is slow (especially in
 " .tex files).
 set number
@@ -30,3 +44,5 @@ set expandtab
 set laststatus=2
 
 " vim: set ft=vim foldmethod=marker ts=4 sw=4 tw=80 et :
+"
+
